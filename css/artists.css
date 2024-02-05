@@ -1,9 +1,8 @@
 body, html {
     height: 100%;
-    margin: auto;   
-    overflow: hidden; 
+    margin: auto;  
+    overflow: hidden;  
 }
-
 
 .container {
     position: relative;
@@ -11,14 +10,15 @@ body, html {
 }
 
 .background-image {
-    background-image: url("../media/images/img-2.jpeg");
+    background-image: url("../media/images/img-1.jpeg");
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: black;
     
-    height: 110%;
+    height: 100%;
 }
+
 
 .menu {
     position: absolute;
@@ -26,68 +26,88 @@ body, html {
     right: 0;
     padding: 13px; 
     display: flex;
-    flex-direction: row;
 }
+
 .menu button {
-    display:block;
     width: 100px;
     height: 50px;
-    background-color:aqua; 
-    margin-bottom: 90px; 
+    background-color: aqua; 
     margin-right: 10px;
     border-radius: 10px;
     border: 4px solid #88b518;
-    font-size: 16px
-
-}
-.menu button a{
-    color: azure;
-    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-div.gallery {
-    border: 1px solid #ccc;
+.menu button:hover {
+    background-color: #88b518;
 }
-  
-div.gallery:hover {
-    border: 1px solid #777;
+
+.RBRow {
+    border: 4px solid #f77032; 
 }
-  
-div.gallery img {
-    width: 100%;
-    height: auto;
+
+.FolkRow {
+    border: 4px solid #c50404; 
 }
-  
-div.desc {
-    padding: 15px;
-    text-align: center;
+
+.RockRow {
+    border: 4px solid #000000; 
 }
-  
-* {
-    box-sizing: border-box;
+.BluesRow {
+    border: 4px solid #003cff; 
 }
-  
-.responsive {
-    padding: 0 6px;
+
+
+.img {
+    margin-top: 40px;
+    padding: 90px;
     float: left;
-    width: 24.99999%;
 }
-  
-@media only screen and (max-width: 700px) {
-    .responsive {
-      width: 49.99999%;
-      margin: 6px 0;
-    }
+
+
+.img img {
+    width: 120%;
+    height: 100px;
+    display: block;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 4px solid #dddddd;
+    border-radius: 4px;
+    padding: 5px;
+    
+    
 }
-  
-@media only screen and (max-width: 500px) {
-    .responsive {
-      width: 100%;
-    }
+
+.image-container {
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
-  
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+.overlay {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    background-color: rgba(4, 28, 37, 0.7);
+    overflow: hidden;
+    width: 130%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.text {
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.image-container:hover .overlay {
+    height: 100%;
 }
