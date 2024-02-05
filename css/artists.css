@@ -111,3 +111,9 @@ body, html {
 .image-container:hover .overlay {
     height: 100%;
 }
+
+.music{
+    position: absolute;
+    top: 90%;
+    left: 75%;  
+}
